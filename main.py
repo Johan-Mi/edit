@@ -13,6 +13,9 @@ class MyApplication(Gtk.Application):
 
     def do_activate(self):
         window = Gtk.ApplicationWindow(application=self, title="edit")
+        text_view = Gtk.TextView()
+        text_view.show()
+        window.add(text_view)
         window.present()
 
 def main():
